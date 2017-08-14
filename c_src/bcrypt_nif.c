@@ -168,7 +168,7 @@ static ErlNifFunc bcrypt_nif_funcs[] =
 {
 	{"bf_init", 3, bf_init},
 	{"bf_expand0", 3, bf_expand0, ERL_NIF_DIRTY_JOB_CPU_BOUND},
-	{"bf_encrypt", 1, bf_encrypt}
+	{"bf_encrypt", 1, bf_encrypt, ERL_NIF_DIRTY_JOB_CPU_BOUND}
 };
 
 ERL_NIF_INIT(Elixir.Bcrypt.Base, bcrypt_nif_funcs, NULL, NULL, upgrade, NULL)
