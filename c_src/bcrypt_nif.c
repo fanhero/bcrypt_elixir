@@ -167,7 +167,7 @@ static int upgrade(ErlNifEnv* env, void** priv_data, void** old_priv_data, ERL_N
 static ErlNifFunc bcrypt_nif_funcs[] =
 {
 	{"bf_init", 3, bf_init},
-	{"bf_expand0", 3, bf_expand0},
+	{"bf_expand0", 3, bf_expand0, ERL_NIF_DIRTY_JOB_CPU_BOUND},
 	{"bf_encrypt", 1, bf_encrypt}
 };
 
